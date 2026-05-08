@@ -10,28 +10,25 @@ Vibe Gaming Extended is a full-stack browser gaming zone built as a college mini
 - Backend API for authentication, sessions, scores, and feedback.
 
 ## Screenshots
-Screenshots should be placed in `docs/screenshots/`.
+### Landing Page
+![Vibe Gaming landing page](docs/screenshots/home.png)
 
-Recommended filenames:
-- `home.png`
-- `game-cards.png`
-- `snake-section.png`
-- `contact-feedback.png`
-- `brick-game.png`
-- `login-modal.png`
-- `navbar-logo.png`
+### Game Selection Cards
+![Interactive game cards](docs/screenshots/game-cards.png)
 
-After adding the images, this section can display them like this:
+### Game Detail Section
+![Snake game section with demo video](docs/screenshots/snake-section.png)
 
-```md
-![Home page](docs/screenshots/home.png)
-![Game cards](docs/screenshots/game-cards.png)
-![Snake section](docs/screenshots/snake-section.png)
-![Contact and feedback](docs/screenshots/contact-feedback.png)
-![Brick game](docs/screenshots/brick-game.png)
-![Login modal](docs/screenshots/login-modal.png)
-![Navbar logo](docs/screenshots/navbar-logo.png)
-```
+### Contact, Feedback, And Ratings
+![Contact and feedback section](docs/screenshots/contact-feedback.png)
+
+### Gameplay And Login
+| Brick Breaker | Login Modal |
+| --- | --- |
+| ![Brick breaker gameplay](docs/screenshots/brick-game.png) | ![Login modal](docs/screenshots/login-modal.png) |
+
+### Branding
+![Vibe Gaming navbar logo](docs/screenshots/navbar-logo.png)
 
 ## Tech Stack
 | Layer | Technologies |
