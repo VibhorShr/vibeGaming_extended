@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Nunito&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="project.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vibe Gaming</title>
+</head>
+
+<body>
+
+  <div class="dev">
+    <div class="dv">
+
+      <button id="brandLoginBtn" type="button"
+        style="float: left;position : relative;top: 5px;left: 30px;background: transparent;border: 0;box-shadow: none;color: white;cursor: pointer;font: inherit;padding: 0;">
+        <h2 style="margin: 0;"><img id="brandLogoImg" style="float: left;width: 30px;height: 30px;" src="logo.jpg"> Vibe Gaming</h2>
+      </button>
+      <div id="brandAccountMenu" class="brand-account-menu">
+        <p id="brandAccountName"></p>
+        <button id="brandLogoutBtn" type="button">Logout</button>
+      </div>
+      <a href=#contact>
+        <pre style="float: right;"><h2 style="color:white;position : relative;right : 30px">CONTACT </h2></pre>
+      </a>
+      <a href=about.html>
+        <pre style="float: right"><h2 style = "position : relative ; right : 60px;color:white">ABOUT</h2></pre>
+      </a>
+      <a href=#home>
+        <pre style="float: right"><h2 style = "position : relative ; right : 90px;color:white">HOME</h2></pre>
+      </a>
+    </div>
+
+    <div id="home" class="first">
+
+      <p style="font-size : 100px;color : skyblue;position : relative;top:20px ;text-shadow : 2px 2px 50px skyblue; font-family: 'Orbitron', sans-serif;font-weight : bold;
+">VIBE GAMING </p>
+      <p style="font-size : 80px ;text-shadow : 2px 2px 50px white;position : relative ; bottom: 80px; font-family: 'Orbitron', sans-serif;font-weight :   bold;
+">GAME ZONE </p>
+      <h3 style="color : grey ;text-shadow : 20px 20px 500px grey;position : relative;bottom :130px; font-family: 'Orbitron', sans-serif;
+">A beginner-friendly gaming zone made as a college mini project featuring 5 basic games using web technologies</h3>
+
+      <div class="cards">
+        <a href=#mcf>
+          <img id="card1" onmouseover="card1()" onmouseout="cardin()" style="height : 250px; " src="card.jpg">
+        </a>
+        <a href=#rps>
+          <img id="card2" onmouseover="card2()" onmouseout="cardin2()" style="height : 250px; " src="card.jpg">
+        </a>
+        <a href=#tct>
+          <img id="card3" onmouseover="card3()" onmouseout="cardin3()" style="height : 250px; " src="card.jpg">
+        </a>
+        <a href=#sg>
+          <img id="card4" onmouseover="card4()" onmouseout="cardin4()" style="height : 250px; " src="card.jpg">
+        </a>
+
+        <a href=#bg>
+          <img id="card5" onmouseover="card5()" onmouseout="cardin5()" style="height : 250px; " src="card.jpg">
+        </a>
+        <br>
+
+      </div>
+      <h1 style="position : relative;bottom : 90px;color : violet;text-shadow : 2px 2px 50px violet;">FLIP 🃏CHOOSE AND
+        PLAY!!</h1>
+
+      <br>
+    </div>
+
+
+
+    <div id="mcf" class="div4">
+      <h1 style="color:rgb(46, 127, 234)" class="fontt">🧠 Memory Match – Test Your Brain!</h1>
+      <div class="leftt">
+        <p style="font-family: 'Nunito', sans-serif;text-align : left;">
+          🧠 Welcome to Memory Match
+          Test your focus and short-term memory in this fast-paced card-flipping challenge.
+          Flip two cards — if they match, they stay open; if not, they flip back.
+          Match all pairs in the fewest moves to win!
+          Think you're sharp? Let's find out!
+        </p>
+        <h3 style=" color:rgb(201, 97, 147)">📋 How to Play</h3>
+        <p>
+        <ul style="font-family: 'Nunito', sans-serif;text-align : left;">
+          <li>Flip your first card.</li>
+          <li>Click any two cards and reveal what’s inside.</li>
+          <li>If the two cards match, they stay face-up.</li>
+          <li>Continue flipping until all card pairs are matched.</li>
+          <li>Find all pairs to win and celebrate your memory skills!</li>
+        </ul>
+        </p>
+
+
+
+      </div>
+
+      <h3 style=" color:rgb(203, 231, 22)">🎥 Game Demo</h3>
+      <p>
+
+
+        <br>
+        <video height="230px" width="380px" poster="memory.jpg" src="mgv.mp4" controls></video>
+        <a href="memory game.html" target="_blank">
+          <p class="button1">LETS PLAY</p>
+        </a>
+
+
+
+    </div>
+
+    <div class="div5" id="rps">
+
+
+      <h1 style=" color:rgba(227, 210, 17, 0.947)" class="fontt"> Rock Paper Scissors – AI Edition</h1>
+      <div class="leftt">
+        <p style="font-family: 'Nunito', sans-serif;text-align : left;">
+          🪨📄✂ Rock, Paper, Scissors – Digital Edition!
+          Challenge the AI in a quick, fun battle of luck and logic.
+          Pick your move and see the AI’s response instantly.
+          Scores update automatically — can you outsmart the machine? Ready to play?
+        <h3 style=" color:rgb(201, 97, 147);font-family: 'Nunito', sans-serif;text-align : left;">📋 How to Play</h3>
+        <ul style="font-family: 'Nunito', sans-serif;text-align : left;">
+          <li>Click on one of the three choices: ✊🏻 📄 ✂ .</li>
+          <li>The AI will automatically select its move in real-time.</li>
+          <li>The result will be shown instantly.</li>
+          <li>Your score and the AI’s score are displayed side by side for every round.</li>
+          <li>Click the 🔄 Restart button anytime to reset scores and play again from scratch.</li>
+        </ul>
+
+      </div>
+      <h3 style=" color:rgb(203, 231, 22)">🎥 GAME DEMO</h3>
+
+
+      <video height="230px" width="400px" poster="rock.jpg" src="rpsv.mp4" controls></video>
+      </video>
+      <br><br>
+      <a href="rock game.html" target="_blank">
+        <p class="button2">LETS PLAY</p>
+      </a>
+
+
+
+      </p>
+    </div>
+    <div class="div6" id="tct">
+      <h1 style="color:rgb(250, 55, 208);" class="fontt">🎮 Tic Tac Toe – Classic 1v1 Fun!</h1>
+      <div class="leftt">
+        <p style="font-family: 'Nunito', sans-serif;text-align : left;">
+          Play a fun 1v1 game offline on the same device
+          Player 1 is ❌ and Player 2 is ⭕. X always starts
+          Take turns placing symbols — get three in a row to win!
+          No winner? It’s a draw. Hit 🔁 to play again anytime!
+        </p>
+        <h3 style=" color:rgb(185, 176, 46);font-family: 'Nunito', sans-serif;text-align : left;">📋 How to Play</h3>
+        <ul style="font-family: 'Nunito', sans-serif;text-align : left;">
+          <li>The game starts automatically when the first player clicks a box.</li>
+          <li><strong>Player 1</strong> uses ❌ and <strong>Player 2</strong> uses ⭕.</li>
+          <li>Click on an empty square to place your symbol.</li>
+          <li>Alternate turns until one player gets three in a row or the game ends in a draw.</li>
+          <li>Use the <strong>🔁 Reset</strong> button to play again anytime.</li>
+        </ul>
+      </div>
+
+      <h3 style="color:rgb(37, 199, 228)">🎥 GAME DEMO</h3>
+      <br>
+      <video height="230px" width="400px" poster="tictac.jpg" src="tttv.mp4" controls></video>
+      <a href="tic tac toe.html" target="_blank">
+        <p class="button4">LETS PLAY</p>
+      </a><br><br>
+
+    </div>
+    <div id="sg" class="div3">
+      <marquee scrollamount="12" direction="left">
+        🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍
+      </marquee>
+      <h1 style="color:rgb(98, 161, 243)" class="fontt">🐍Snake Game🐍</h1>
+      <div class="leftt">
+        <p style="font-family: 'Nunito', sans-serif;text-align : left;">
+          The classic Snake Game is a timeless favorite! Control the hungry snake as it moves around the board,
+          collecting food to grow longer. But be careful — don’t crash into the walls or your own tail, or it's game
+          over! This version is built using pure JavaScript, CSS, and HTML, giving a smooth and nostalgic experience.
+          It's a test of your reflexes, timing, and strategy. How long can you survive?
+        </p>
+        <h3 style="color:rgb(201, 97, 147) ;font-family: 'Nunito', sans-serif;text-align : left;">📋 How to Play ?</h3>
+        <ul style="font-family: 'Nunito', sans-serif;text-align : left;">
+          <li>Use arrow keys to move the snake (↑ ↓ ← →)</li>
+          <li>Eat food to grow and score points</li>
+          <li>Avoid walls and your own tail — or it’s game over</li>
+          <li>The snake gets faster, so stay sharp and beat your high score!</li>
+
+        </ul>
+      </div>
+
+      <h3 style="color:rgb(37, 199, 228)">🎥 GAME DEMO</h3>
+      <br>
+      <video height="230px" width="400px" poster="snake.jpg" src="snake game video.mp4" controls></video>
+      <a href="snake game.html" target="_blank">
+        <p class="button4">LETS PLAY</p>
+      </a><br><br>
+
+
+
+
+
+
+      <marquee scrollamount="12" direction="right">
+        🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍🐍
+      </marquee>
+
+    </div>
+    <div class="div7" id="bg">
+      <h1 style="color:rgb(169, 126, 8)" class="fontt">BRICK GAME</h1>
+      <div class="leftt">
+        <p style="font-family: 'Nunito', sans-serif;text-align : left;">
+          Brick Game is a modern take on the classic arcade brick breaker. Your mission is simple: use the paddle to
+          bounce the ball and destroy all the bricks on the screen. But there's a twist — you have 10 handcrafted levels
+          to conquer. Each level is harder, faster, and more intense than the last!
+        </p>
+        <h3 style=" color:rgb(185, 176, 46)">🕹 How to Play
+        </h3>
+        <ul style="font-family: 'Nunito', sans-serif;text-align : left;">
+          <li>Move your paddle left/right to bounce the ball</li>
+          <li>Break all the bricks to complete the level</li>
+          <li> Advance automatically to the next level</li>
+          <li>Don’t lose all your chances — the game ends if you do</li>
+          <li>Finish Level 10 to win the entire game!</li>
+        </ul>
+      </div>
+      <h3 style="color:rgb(37, 199, 228)">🎥 GAME DEMO</h3>
+
+      <video height="230px" width="400px" poster="brick.jpg" src="brickv.mp4" controls></video>
+      <a href="brick game.html" target="_blank">
+        <p class="button5">LETS PLAY</p>
+      </a><br><br>
+    </div>
+
+
+
+
+
+    <div id="contact" class="bottomdiv">
+      
+      <div class="contact">
+        <h2 style="color : skyblue">CONTACT US </h2>
+        <i class="fa-solid fa-envelope"></i>
+        vibegaming18@gmail.com<br><br>
+
+        <i class="fa-solid fa-phone"></i>
+        8219603264<br><br>
+
+        <i class="fa-brands fa-instagram"></i>
+        vibe_ig<br><br>
+
+        <i class="fa-brands fa-square-x-twitter"></i>
+        vibegaming_xhandle
+      </div>
+      <div class="credits">
+
+        <h2 style="color : skyblue">CREDITS</h2>
+        <i class="fa-brands fa-font-awesome"></i>
+        FontAwesome icons<br><br>
+
+        <i class="fa-brands fa-vimeo"></i>
+        Vecteezy images<br><br>
+
+        <i class="fa-brands fa-square-instagram"></i>
+        Inshot video editing<br><br>
+
+        <i class="fa-brands fa-google"></i>
+        Google search
+      </div>
+
+      <div class="form">
+        <form id="feedbackForm">
+          <h2 style="color : skyblue">SUGGESTION BOX </h2>
+          <textarea name="feedback" id="feedbackText" placeholder="Write your suggestion"></textarea><br><br><br>
+
+          <i class="fa-solid fa-paper-plane" style="color :red;">
+            <input type="submit" value="Send">
+          </i>
+          <p id="feedbackStatus" class="feedback-status"></p>
+        </form>
+      </div>
+      <div class="rating">
+        <h2 style="color : skyblue;">RATINGS</h2>
+        <input type="radio" name="rating" value="5" form="feedbackForm">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i><br><br>
+
+        <input type="radio" name="rating" value="4" form="feedbackForm">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i><br><br>
+
+        <input type="radio" name="rating" value="3" form="feedbackForm">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i><br><br>
+
+        <input type="radio" name="rating" value="2" form="feedbackForm">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i><br><br>
+
+        <input type="radio" name="rating" value="1" form="feedbackForm">
+        <i class="fa-solid fa-star"></i>
+      </div>
+
+      <div class="love">
+        <h1 style="color : #f10453; text-shadow : 2px 2px 50px #f11e1e;">Made with <i class="fa-solid fa-heart"
+            style="color: #ff0000;"></i> by us!!!</h1>
+      </div>
+
+      <div class="copyrights">
+        <i class="fa-regular fa-copyright"></i> 2025 Vibe Gaming.All rights reserved.
+      </div>
+
+
+
+    </div>
+  </div>
+
+  <script src="game-auth.js"></script>
+  <script>
+
+
+    function cardin() {
+      document.getElementById("card1").src = "card.jpg";
+    }
+    function cardin2() {
+      document.getElementById("card2").src = "card.jpg";
+    }
+    function cardin3() {
+      document.getElementById("card3").src = "card.jpg";
+    }
+    function cardin4() {
+      document.getElementById("card4").src = "card.jpg";
+    }
+    function cardin5() {
+      document.getElementById("card5").src = "card.jpg";
+    }
+    function card1() {
+      document.getElementById("card1").style.width = "150px";
+      document.getElementById("card1").src = "memory.jpg";
+
+    }
+    function card2() {
+      document.getElementById("card2").style.width = "150px";
+      document.getElementById("card2").src = "rock.jpg";
+
+    }
+
+    function card3() {
+      document.getElementById("card3").style.width = "150px";
+      document.getElementById("card3").src = "tictac.jpg";
+
+    }
+
+    function card4() {
+      document.getElementById("card4").style.width = "150px";
+      document.getElementById("card4").src = "snake.jpg";
+
+    }
+    function card5() {
+      document.getElementById("card5").style.width = "150px";
+      document.getElementById("card5").src = "brick.jpg";
+
+    }
+
+    const feedbackForm = document.getElementById("feedbackForm");
+    const feedbackStatus = document.getElementById("feedbackStatus");
+    const brandLoginBtn = document.getElementById("brandLoginBtn");
+    const brandAccountMenu = document.getElementById("brandAccountMenu");
+    const brandAccountName = document.getElementById("brandAccountName");
+    const brandLogoutBtn = document.getElementById("brandLogoutBtn");
+    const brandLogoImg = document.getElementById("brandLogoImg");
+
+    function syncBrandAccountState() {
+      const user = VibeAuth.getUser();
+      brandLogoImg.classList.toggle("logged-in", VibeAuth.isLoggedIn());
+      brandAccountName.textContent = user ? `Logged in as ${user.username}` : "";
+      if (!VibeAuth.isLoggedIn()) {
+        brandAccountMenu.classList.remove("open");
+      }
+    }
+
+    brandLoginBtn.addEventListener("click", () => {
+      if (VibeAuth.isLoggedIn()) {
+        brandAccountMenu.classList.toggle("open");
+        return;
+      }
+
+      VibeAuth.showLoginRequired("Login or create an account to save your scores in every game.");
+    });
+
+    brandLogoutBtn.addEventListener("click", async () => {
+      await VibeAuth.logout();
+      syncBrandAccountState();
+    });
+
+    window.addEventListener("vibe:login", syncBrandAccountState);
+    window.addEventListener("vibe:logout", syncBrandAccountState);
+    syncBrandAccountState();
+
+    feedbackForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(feedbackForm);
+      const feedback = String(formData.get("feedback") || "").trim();
+      const rating = formData.get("rating");
+
+      feedbackStatus.textContent = "Sending...";
+      feedbackStatus.className = "feedback-status";
+
+      try {
+        const response = await fetch("/api/feedback", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ feedback, rating })
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+          throw new Error(data.message || "Feedback could not be sent.");
+        }
+
+        feedbackForm.reset();
+        feedbackStatus.textContent = data.message;
+        feedbackStatus.classList.add("success");
+      } catch (error) {
+        feedbackStatus.textContent = error.message;
+        feedbackStatus.classList.add("error");
+      }
+    });
+
+
+
+
+
+  </script>
+
+
+</body>
+
+</html>

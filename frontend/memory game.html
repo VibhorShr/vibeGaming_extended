@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memory Matching Game</title>
+  <!-- <link rel="stylesheet" href="style.css" /> -->
+   <style>
+     html{
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 20px;
+  font-family:surprisedmonkey, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image:url("img.jpg");
+  background-size: cover;
+  color:white ;
+}
+
+.game-board {
+  --card-size: clamp(64px, 20vw, 100px);
+  display: grid;
+  grid-template-columns: repeat(4, var(--card-size)); /*for making 4 columns */
+  gap: 10px;
+  margin-top: 20px; /* space between the board and the title */
+}
+
+.card {
+  width: var(--card-size);
+  height: var(--card-size);
+  background: #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: clamp(2rem, 12vw, 4rem);
+  border-radius: 8px;
+  position: relative;
+  perspective: 1000px;
+}
+
+.card .front,
+.card .back {
+  position: absolute;
+  width: var(--card-size);
+  height: var(--card-size);
+  backface-visibility: hidden; /* Hides the back side when flipped */
+  transition: transform 0.5s;
+}
+
+.card .front {
+  background-image:url("img2.jpg");
+  background-size: cover;
+  transform: rotateY(0deg);
+}
+
+
+.card .back {
+  background: #fff;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* font-size: 2rem; */
+}
+
+@media (max-width: 420px) {
+  .game-board {
+    gap: 8px;
+  }
+}
+.card.flipped .front {
+  transform: rotateY(180deg);
+}
+
+.card.flipped .back {
+  transform: rotateY(360deg);
+}
+   </style>
+   <link href="https://fonts.cdnfonts.com/css/surprisedmonkey" rel="stylesheet">
+</head>
+<body>
+  <h1>Memory Match Game</h1>
+  <!-- <h2>(Jungle Edition)</h2> -->
+  <div class="game-board" id="game-board">
+  </div>
+  <!-- <div id="timer">Time: 0s</div> -->
+  <script src="game-auth.js"></script>
+  <script>
+    const emojis = ['🐶', '🐱', '🦊', '🐼', '🐸', '🐵', '🐯', '🦁'];
+let cardValues = [...emojis, ...emojis]; // duplicate for pairs
+cardValues = cardValues.sort(() => 0.5 - Math.random()); /* Shuffle the cards */
+
+const board = document.getElementById('game-board');
+let firstCard = null; // Store the first flipped card
+let lockBoard = false; // Prevent multiple flips at once
+let moves = 0;
+let gameFinished = false;
+
+// Create cards
+cardValues.forEach(value => {
+  const card = document.createElement('div');
+  card.classList.add('card');
+  card.innerHTML = `<div class="front"></div>
+     <div class="back">${value}</div>`;
+  card.addEventListener('click', () => flipCard(card, value));
+  board.appendChild(card);
+});
+
+function flipCard(card, value) {
+  if (lockBoard || card.classList.contains('flipped')) return;
+  card.classList.add('flipped');
+
+  if (!firstCard) {
+    firstCard = { card, value };
+  } else {
+    moves++;
+    if (firstCard.value === value) {
+      firstCard = null;
+    } else {
+      lockBoard = true;
+      setTimeout(() => {
+        card.classList.remove('flipped');
+        firstCard.card.classList.remove('flipped');
+        firstCard = null;
+        lockBoard = false;
+      }, 1000);
+    }
+  }
+  checkWin();
+}
+function checkWin() {
+  if (gameFinished) return;
+  const allCards = document.querySelectorAll('.card');
+  const flippedCards = document.querySelectorAll('.card.flipped');
+  if (flippedCards.length === allCards.length) {
+    gameFinished = true;
+    console.log("You won!");
+    let newHd = document.createElement("h2");
+    newHd.innerHTML = "Congratulations🎉! You Won!";
+    document.querySelector("body").appendChild(newHd);
+    const score = Math.max(100, 1000 - moves * 25);
+    VibeAuth.finishRound("memory", score);
+
+    const playAgain = document.createElement("button");
+    playAgain.textContent = "Play Again";
+    playAgain.onclick = () => {
+      if (!VibeAuth.isLoggedIn()) {
+        VibeAuth.showLoginRequired();
+        return;
+      }
+      location.reload();
+    };
+    document.body.appendChild(playAgain);
+    // setTimeout(() => {
+    //   window.location.reload();
+    // }, 6000);
+  }
+}
+
+  </script>
+</body>
+</html>
+

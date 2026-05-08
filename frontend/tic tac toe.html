@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TIC-TAC-TOE</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: teal;
+      flex-direction: column;
+      margin: 0;
+      padding: 20px;
+    }
+    #xo {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      width: min(86vw, 300px);
+      aspect-ratio: 1;
+      height: auto;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .box {
+      border-radius: 10%;
+      text-align: center;
+      border:5px outset green;
+      align-content: center;
+      font-size: 30px;
+      font-weight: bolder;
+      color: hsl(0, 64%, 55%);
+      text-shadow: 1px 1px 1px red;
+      background-color: hsl(60, 56%, 91%);
+    }
+    .box:hover:not(.winner) {
+      background-color: hsl(60, 56%, 85%);
+    }
+    .winner {
+      animation: pulse 1s infinite;
+      background-color: #c0ca8e;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); color: hsl(33, 100%, 88%); }
+      100% { transform: scale(1); }
+    }
+    button {
+      all: unset;
+      margin: 50px;
+      width: 100px;
+      height: 50px;
+      border: 8px groove red;
+      background: linear-gradient(45deg, red, yellow);
+      text-align: center;
+      border-radius: 10%;
+      box-shadow: -10px -10px 0px rgba(0, 0, 0, 0.3);
+    }
+    button:hover {
+      background: linear-gradient(45deg, yellow, red);
+      box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3);
+    }
+    h1 {
+      margin-bottom: 30px;
+      color: rgb(232, 233, 234);
+      text-decoration: underline wavy blue;
+      text-shadow: -10px -10px 7px;
+    }
+    .message {
+      font-size: 40px;
+      margin-top: 10px;
+      max-width: 90vw;
+      text-align: center;
+    }
+
+    @media (max-width: 420px) {
+      h1 {
+        font-size: 28px;
+      }
+
+      .message {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div><h1>TIC-TAC-TOE</h1></div>
+  <div id="xo">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+  <button>Reset</button>
+  <script src="game-auth.js"></script>
+  <script>
+    const boxes = document.querySelectorAll(".box");
+    const button = document.querySelector("button");
+    let count = 0;
+    let gameOver = false;
+    let scoreSaved = false;
+
+    const winCombos = [
+      [0,1,2], [3,4,5], [6,7,8], // rows
+      [0,3,6], [1,4,7], [2,5,8], // cols
+      [0,4,8], [2,4,6]           // diagonals
+    ];
+
+    function showMessage(text, color) {
+      const msg = document.createElement("div");
+      msg.classList.add("message");
+      msg.textContent = text;
+      msg.style.color = "orange";
+      
+      msg.style.border="8px ridge green";
+        msg.style.background="lightgreen";
+        msg.style.fontStyle="italic";
+      document.body.appendChild(msg);
+    }
+
+    function checkWinner(player) {
+      for (const combo of winCombos) {
+        const [a, b, c] = combo;
+        if (boxes[a].innerText === player &&
+            boxes[b].innerText === player &&
+            boxes[c].innerText === player) {
+          boxes[a].classList.add("winner");
+          boxes[b].classList.add("winner");
+          boxes[c].classList.add("winner");
+          showMessage(player === 'X' ? "X WINS" : "0 WINS");
+          gameOver = true;
+          if (!scoreSaved) {
+            scoreSaved = true;
+            VibeAuth.finishRound("tic-tac-toe", 100);
+          }
+          return true;
+        }
+      }
+      return false;
+    }
+
+    boxes.forEach(box => {
+      box.addEventListener('click', () => {
+        if (box.innerText !== '' || gameOver) return;
+
+        box.innerText = (count % 2 === 0) ? 'X' : '0';
+        count++;
+
+        const currentPlayer = box.innerText;
+        if (checkWinner(currentPlayer)) return;
+
+        if (count === 9) {
+          showMessage("Draw!", "orange");
+          gameOver = true;
+          if (!scoreSaved) {
+            scoreSaved = true;
+            VibeAuth.finishRound("tic-tac-toe", 50);
+          }
+        }
+      });
+    });
+
+    button.addEventListener('click', () => {
+      if (gameOver && !VibeAuth.isLoggedIn()) {
+        VibeAuth.showLoginRequired();
+        return;
+      }
+      boxes.forEach(box => {
+        box.innerText = "";
+        box.classList.remove("winner");
+      });
+      document.querySelectorAll(".message").forEach(m => m.remove());
+      count = 0;
+      gameOver = false;
+      scoreSaved = false;
+    });
+  </script>
+</body>
+</html>

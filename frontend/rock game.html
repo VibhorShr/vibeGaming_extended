@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <style>
+        /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap'); */
+
+* {
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Poppins', sans-serif; */
+      font-family:surprisedmonkey, sans-serif;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+body {
+    /* background: linear-gradient(135deg, #1f1c2c, #928dab); */
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding-top: 2rem;
+    color: #fff;
+    position: relative;
+}
+
+h1 {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.choice {
+    height: 120px;
+    width: 120px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.choice:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+img {
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    padding: 1.5rem 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.score p {
+    margin: 0.2rem 0;
+}
+
+#user-score,
+#comp-score {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.msg-container {
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+}
+
+#msg {
+    font-size: 1.4rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.8rem;
+    transition: background-color 0.3s ease;
+}
+
+.restart-btn {
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 0.8rem;
+    background: linear-gradient(135deg, #00f260, #0575e6);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.restart-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+#msg {
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .choices {
+        gap: 1rem;
+    }
+
+    .choice {
+        height: 96px;
+        width: 96px;
+    }
+
+    img {
+        height: 64px;
+        width: 64px;
+    }
+
+    .scoreboard {
+        gap: 2rem;
+        width: 100%;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <h1>Rock Paper Scissors</h1>
+    <div class="choices">
+        <div class="choice" id="rock">
+            <img src="rock2.jpg">
+        </div>
+        <div class="choice" id="paper">
+            <img src="paper.jpg">
+        </div>
+        <div class="choice" id="scissors">
+            <img src="scissors.jpg">
+        </div>
+    </div>
+    <div class="scoreboard">
+        <div class="score">
+            <p id="user-score">0</p>
+            <p>You</p>
+        </div>
+        <div class="score">
+            <p id="comp-score">0</p>
+            <p>AI</p>
+        </div>
+    </div>
+    <div class="msg-container">
+        <p id="msg">Play your move !</p>
+    </div>
+    <script src="game-auth.js"></script>
+    <script>
+
+        let userScore = 0;
+let compScore = 0;
+let gameOver = false;
+
+const choices = document.querySelectorAll(".choice");
+const msg = document.querySelector("#msg");
+const userScorePara = document.querySelector("#user-score");
+const compScorePara = document.querySelector("#comp-score");
+
+// Generate computer's move
+const genCompChoice = () => {
+    const choices = ["rock", "paper", "scissors"];
+    return choices[Math.floor(Math.random() * 3)];
+};
+
+// Handle draw
+const drawGame = () => {
+    msg.innerText = "It's a draw!";
+    msg.style.backgroundColor = "#555";
+};
+
+// Show winner of each round
+const showWinner = (userWin, userChoice, compChoice) => {
+    if (userWin) {
+        userScore++;
+        userScorePara.innerText = userScore;
+        msg.innerText = `You win this round! 🎯`;
+        msg.style.backgroundColor = "green";
+    } else {
+        compScore++;
+        compScorePara.innerText = compScore;
+        msg.innerText = `AI wins this round. 🤖`;
+        msg.style.backgroundColor = "crimson";
+    }
+
+    if (userScore === 5 || compScore === 5) {
+        gameOver = true;
+        declareFinalWinner();
+    }
+};
+
+// Final winner
+const declareFinalWinner = () => {
+    if (userScore === 5) {
+        msg.innerText = "🎉 Congratulations! You won the game!";
+    } else {
+        msg.innerText = "😔 AI defeated you. Try again!";
+    }
+    VibeAuth.finishRound("rock-paper-scissors", userScore);
+    createRestartButton();
+};
+
+// Restart button
+const createRestartButton = () => {
+    const restartBtn = document.createElement("button");
+    restartBtn.innerText = "Play Again 🔁";
+    restartBtn.classList.add("restart-btn");
+    restartBtn.onclick = () => {
+        if (!VibeAuth.isLoggedIn()) {
+            VibeAuth.showLoginRequired();
+            return;
+        }
+        location.reload();
+    };
+    document.querySelector(".msg-container").appendChild(restartBtn);
+};
+
+// Play round
+const playGame = (userChoice) => {
+    if (gameOver) return;
+
+    const compChoice = genCompChoice();
+    if (userChoice === compChoice) {
+        drawGame();
+    } else {
+        const userWins =
+            (userChoice === "rock" && compChoice === "scissors") ||
+            (userChoice === "paper" && compChoice === "rock") ||
+            (userChoice === "scissors" && compChoice === "paper");
+        showWinner(userWins, userChoice, compChoice);
+    }
+};
+
+// Handle clicks
+choices.forEach((choice) => {
+    choice.addEventListener("click", () => {
+        playGame(choice.id);
+    });
+});
+
+    </script>
+</body>
+
+</html>

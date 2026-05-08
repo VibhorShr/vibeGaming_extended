@@ -1,0 +1,686 @@
+.first
+      {
+        background-color : rgba(0,0,0,0.6);
+         max-width: 100%;
+  width: 100%;
+        text-align : center;
+        margin-top : -100px;
+        background: url("bg.jpg");
+        background-repeat: repeat-x;
+        background-size: cover;
+      }
+
+      .cards
+      {
+        display : flex;
+        gap:50px;
+        justify-content: center;
+        position : relative;
+        bottom : 120px;
+
+      }
+       .fontt
+       {
+        font-family: 'Orbitron', sans-serif;
+       }
+    body{
+      
+
+    
+      background:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhFjpJe_31pjrOntvqWLyK3_OcBNrVX9LDNg&s);
+       color:#eeeeee;
+       overflow-x: hidden;
+       
+    }
+     .dv {
+    margin: -8px;
+    background-color:rgba(0,0,0,0.5);
+    overflow: hidden; 
+    position : sticky;
+    top :0;
+    }
+    .div0{
+        text-align:center;
+        background-color:rgba(0,0,0,0.5);
+color:lightgray;
+
+border-radius:30px;
+margin:35px;
+padding:20px;
+    }
+
+
+     .div1{
+        text-align:center;
+        background-color:rgba(0,0,0,0.5);
+color:lightgray;
+
+border-radius:30px;
+margin:45px;
+margin-left: 200px;
+margin-right: 200px;
+padding:20px;
+     }
+  
+    
+  
+    
+    
+    .div2{
+        text-align:center;
+        background-color:rgba(0,0,0,0.5);
+color:lightgray;
+
+border-radius:30px;
+margin:45px;
+padding:20px;
+    }
+    .div2:hover
+{
+    
+    box-shadow : 0 0 15px rgb(15, 105, 38),
+                 0 0 30px rgb(15, 105, 38),
+                 0 0 300px rgb(15, 105, 38);               
+}
+    .div3{
+        text-align:center;
+        background-color:rgba(0,0,0,0.5);
+color:lightgray;
+
+border-radius:30px;
+margin:75px;
+margin-left: 200px;
+margin-right: 200px;
+padding:20px;
+    }
+    .div3:hover
+    {
+      
+       box-shadow : 0 0 15px rgb(15, 105, 38),
+                 0 0 30px rgb(15, 105, 38),
+                 0 0 500px rgb(15, 105, 38);  
+
+    }
+    
+    
+    .dev
+    {
+      background-color : rgba(0,0,0,0.5);
+    }
+    .div4{
+        text-align:center;
+        
+        background-color:rgba(0,0,0,0.5);
+color:lightgray;
+
+border-radius:30px;
+margin:75px;
+margin-left: 200px;
+margin-right: 200px;
+padding:20px;
+    }
+    
+
+    .div4:hover
+    {
+       
+       border: 5px groove rgb(17, 99, 207);
+         box-shadow : 0 0 15px rgb(7,99,207),
+                 0 0 30px rgb(7,99,207),
+                 0 0 500px rgb(7,99,207);  
+
+
+    }
+    .div5{
+        text-align:center;
+        background-color:rgba(0,0,0,0.5);
+color:lightgray;
+
+border-radius:30px;
+margin:75px;
+margin-left: 200px;
+margin-right: 200px;
+padding:20px;
+background-size : 200px 200px;
+
+    }
+.div5:hover
+    {
+       
+       border: 5px groove rgb(194, 207, 7);
+         box-shadow : 0 0 15px rgb(194,207,7),
+                 0 0 30px rgb(194,207,7),
+                 0 0 500px rgb(194,207,7);  
+                 
+
+
+    }
+
+    
+    .div6{
+        text-align:center;
+        background-color:rgba(0,0,0,0.5);
+color:lightgray;
+
+border-radius:30px;
+margin:75px;
+margin-left: 200px;
+margin-right: 200px;
+padding:20px;
+    }
+
+    .div6:hover
+    {
+      border: 5px groove rgb(250, 9, 198);
+      box-shadow : 0 0 15px rgb(250,9,198),
+                 0 0 30px rgb(250,9,198),
+                 0 0 500px rgb(250,9,198);  
+
+    }
+    
+
+    
+    .div7{
+        text-align:center;
+        background-color:rgba(0,0,0,0.5);
+color:lightgray;
+
+border-radius:30px;
+margin:45px;
+margin-left: 200px;
+margin-right: 200px;
+padding:20px;
+    }
+
+    .div7:hover
+    {
+      border: 5px groove rgb(169, 126, 8);
+      box-shadow : 0 0 15px rgb(169, 126, 8),
+                 0 0 30px rgb(169, 126, 8),
+                 0 0 500px rgb(169, 126, 8);  
+
+    }
+
+    .name:link
+    {
+        color : rgb(74, 205, 100, 0.742);
+    }
+    .name:visited
+    {
+        color : rgb(74, 205, 100, 0.742);
+    }
+    .name:hover
+    {
+        color : rgb(242, 15, 15);
+    }
+    .name:active
+    {
+        color : grey;
+    }
+    .button1
+    {
+      color:rgb(26, 33, 8);
+      border:10px outset rgb(17, 99, 207);
+      background-color: #c1c7ad;
+      border-radius:1000px;
+       margin-left: auto;
+       margin-right: auto; 
+       padding:5px;
+       width:100px;
+       height:20px;
+       outline : 10px gr red;
+     
+    }
+    .button2
+    {
+      color:rgb(179, 255, 0);
+      border:10px outset rgba(227, 210, 17, 0.947);
+      background-color: #091a03;
+      border-radius:1000px;
+       margin-left: auto;
+       margin-right: auto; 
+       padding:5px;
+       width:100px;
+       height:20px;
+       outline : 10px gr red;
+    }
+    .button3
+    {
+      color:rgb(179, 255, 0);
+      border:10px outset rgb(44, 119, 216);
+      background-color: #191d1e;
+      border-radius:1000px;
+       margin-left: auto;
+       margin-right: auto; 
+       padding:5px;
+       width:100px;
+       height:20px;
+       outline : 10px gr red;
+    }
+    .button4
+    {
+      color:rgb(179, 255, 0);
+      border:10px outset rgb(243, 66, 160);
+      background-color: #060c0e;
+      border-radius:1000px;
+       margin-left: auto;
+       margin-right: auto; 
+       padding:5px;
+       width:100px;
+       height:20px;
+       outline : 10px gr red;
+    }
+    .button5
+    {
+      color:rgb(148, 214, 16);
+      border:10px outset rgb(169, 126, 8);
+      background-color: #060d10;
+      border-radius:1000px;
+       margin-left: auto;
+       margin-right: auto; 
+       padding:5px;
+       width:100px;
+       height:20px;
+       
+    }
+    .leftt
+    {
+      margin-left: 50px;
+      
+      width: 400px;
+      float: left;
+    }
+
+     .bottomdiv
+    {
+      
+      background-color: rgb(0,0,0,0.7);
+    
+      height:400px;
+      
+    }
+    .spi
+    {
+      
+      width : 500px;
+      position : relative;
+      top : 20px;
+      left: 20px;
+    }
+     
+    .contact
+    {
+  
+      position : relative;
+      left: 520px;
+      bottom : 135px;
+    }
+
+    .credits
+    {
+     
+      position : relative;
+      left: 820px;
+      bottom : 333px;
+    }
+    .form
+    {
+      position : relative;
+      left : 380px;
+      bottom : 530px;
+      text-align : center;
+      
+    }
+
+    textarea
+    {
+      
+      background-color : rgb(54, 188, 241,0.1);
+      color : white;
+      position : absolute;
+      left: 695px;
+    }
+    
+
+    input
+    {
+      background-color : #00ffc8;
+      box-shadow:   0 0 5px #00ffc8, 0 0 10px #00ffc8;
+      border:1px ridge #00ffc8;
+      color : black;
+    }
+    input:hover
+    {
+      background-color : #ff4081;
+      box-shadow:   0 0 5px #ff4081, 0 0 10px #ff4081;
+      border:1px ridge #ff4081;
+    }
+
+    .rating
+    { 
+      
+
+      position : relative;
+      left : 1380px;
+      bottom : 674px;
+      
+    }
+
+    input~i
+    {
+      color : gold;
+      box-shadow:   0 0 5px gold, 0 0 10px gold;
+    }
+
+    .love
+    {
+      position : relative ;
+      text-align : center;
+      bottom : 670px;
+    }
+    .lv
+    {
+      background-color : red;
+    }
+
+    .copyrights
+    {
+      position : relative;
+      bottom : 650px;
+      left:  1250px;
+    }
+
+/* Responsive cleanup */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+.dv {
+  margin: 0;
+  z-index: 10;
+}
+
+.dv h2 {
+  margin: 0;
+}
+
+.dv button {
+  font-family: inherit;
+}
+
+#brandLogoImg.logged-in {
+  border: 2px solid skyblue !important;
+  border-radius: 6px;
+  box-shadow: 0 0 8px skyblue, 0 0 18px skyblue !important;
+}
+
+.brand-account-menu {
+  background: rgba(0, 0, 0, 0.88);
+  border: 1px solid skyblue;
+  border-radius: 8px;
+  box-shadow: 0 0 14px rgba(135, 206, 235, 0.85);
+  color: white;
+  display: none;
+  left: 30px;
+  padding: 12px;
+  position: fixed;
+  top: 58px;
+  z-index: 100;
+}
+
+.brand-account-menu.open {
+  display: block;
+}
+
+.brand-account-menu p {
+  margin: 0 0 10px;
+}
+
+.brand-account-menu button {
+  background: #00ffc8;
+  border: 0;
+  border-radius: 6px;
+  box-shadow: 0 0 8px #00ffc8;
+  color: black;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+.dv a {
+  text-decoration: none;
+}
+
+.dv pre {
+  margin: 0;
+  font-family: inherit;
+}
+
+.first {
+  min-height: 100vh;
+  margin-top: 0;
+  padding: 90px 16px 40px;
+}
+
+.first > p:first-of-type {
+  font-size: clamp(44px, 9vw, 100px) !important;
+  line-height: 1.05;
+  margin: 0;
+  position: static !important;
+}
+
+.first > p:nth-of-type(2) {
+  font-size: clamp(34px, 7vw, 80px) !important;
+  line-height: 1.05;
+  margin: 12px 0 22px;
+  position: static !important;
+}
+
+.first > h3 {
+  max-width: 900px;
+  margin: 0 auto 42px;
+  position: static !important;
+  padding: 0 12px;
+}
+
+.cards {
+  align-items: center;
+  bottom: auto;
+  flex-wrap: wrap;
+  gap: clamp(14px, 4vw, 50px);
+  position: static;
+}
+
+.cards img {
+  height: clamp(150px, 28vw, 250px) !important;
+  width: auto;
+}
+
+.first .cards + h1,
+.first h1 {
+  bottom: auto !important;
+  font-size: clamp(24px, 5vw, 42px);
+  line-height: 1.2;
+  margin: 34px auto 0;
+  max-width: 900px;
+  position: static !important;
+}
+
+.div3,
+.div4,
+.div5,
+.div6,
+.div7 {
+  clear: both;
+  margin: 70px auto;
+  max-width: 980px;
+  overflow: hidden;
+  width: min(92%, 980px);
+}
+
+.leftt {
+  float: left;
+  margin: 0 30px 20px 30px;
+  max-width: 100%;
+  width: min(45%, 430px);
+}
+
+.div3 video,
+.div4 video,
+.div5 video,
+.div6 video,
+.div7 video {
+  height: auto;
+  max-width: min(100%, 420px);
+}
+
+.button1,
+.button2,
+.button3,
+.button4,
+.button5 {
+  display: block;
+  height: auto;
+  line-height: 1.2;
+  min-height: 42px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.bottomdiv {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  height: auto;
+  padding: 28px;
+}
+
+.spi,
+.contact,
+.credits,
+.form,
+.rating,
+.love,
+.copyrights {
+  bottom: auto;
+  left: auto;
+  position: static;
+  top: auto;
+  width: auto;
+}
+
+.form {
+  text-align: left;
+}
+
+textarea {
+  display: block;
+  left: auto;
+  min-height: 96px;
+  position: static;
+  resize: vertical;
+  width: min(100%, 320px);
+}
+
+.feedback-status {
+  color: #eeeeee;
+  min-height: 22px;
+}
+
+.feedback-status.success {
+  color: #00ffc8;
+}
+
+.feedback-status.error {
+  color: #ff4081;
+}
+
+.love,
+.copyrights {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.love h1 {
+  font-size: clamp(24px, 5vw, 38px);
+}
+
+@media (max-width: 900px) {
+  .dv {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    padding: 12px;
+    text-align: center;
+  }
+
+  .dv h2,
+  .dv img,
+  .dv button,
+  .dv pre,
+  .dv a h2 {
+    float: none !important;
+    left: auto !important;
+    position: static !important;
+    right: auto !important;
+    top: auto !important;
+  }
+
+  .dv a h2 {
+    font-size: 18px;
+  }
+
+  .leftt {
+    float: none;
+    margin: 0 auto 24px;
+    width: min(100%, 620px);
+  }
+}
+
+@media (max-width: 640px) {
+  .first {
+    padding-top: 70px;
+  }
+
+  .cards {
+    gap: 12px;
+  }
+
+  .cards img {
+    height: 128px !important;
+  }
+
+  .div3,
+  .div4,
+  .div5,
+  .div6,
+  .div7 {
+    border-radius: 18px;
+    margin: 36px auto;
+    padding: 16px;
+    width: min(94%, 620px);
+  }
+
+  .fontt {
+    font-size: clamp(24px, 8vw, 34px);
+  }
+
+  .bottomdiv {
+    grid-template-columns: 1fr;
+    padding: 22px 18px;
+  }
+}
