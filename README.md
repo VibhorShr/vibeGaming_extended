@@ -122,6 +122,11 @@ http://localhost:3000
 
 ## Authors
 B.Tech 2nd Year Students, Jaypee Institute of Information Technology
+My contribution: 
+
+1)Frontend dashboard,Rating pannel, demo videos, games integration 
+
+2)Backend 
 
 ## License
 This project is created for educational purposes only.
